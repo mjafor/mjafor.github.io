@@ -3,138 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M. Jafor | Academic Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>html { scroll-behavior: smooth; }</style>
+    <title>M. Jafor</title>
+    <style>
+        /* Base Styles - Minimalist Academic Layout */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fff;
+            padding: 60px 40px;
+        }
+        
+        /* Layout Container */
+        .wrapper { 
+            display: flex; 
+            max-w-4xl mx-auto; 
+            max-width: 900px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        /* Left Column: Sidebar Navigation & Identity */
+        .sidebar { 
+            width: 200px; 
+            flex-shrink: 0; 
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+        }
+        .sidebar h1 { 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            color: #000; 
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        .sidebar .title {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .sidebar nav ul { list-style: none; }
+        .sidebar nav ul li { margin-bottom: 12px; }
+        .sidebar nav ul li a { 
+            text-decoration: none; 
+            color: #444; 
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .sidebar nav ul li a:hover { color: #000; font-weight: 500; }
+
+        /* Right Column: Main Content Area */
+        .content { 
+            flex-grow: 1; 
+            max-width: 640px;
+        }
+        
+        /* Typography & Sections */
+        section { margin-bottom: 45px; }
+        p { margin-bottom: 18px; color: #333; text-align: justify; }
+        
+        .thesis-title {
+            font-weight: 600;
+            color: #111;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .thesis-meta {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        /* List styles */
+        ul.skills-list { 
+            list-style: none; 
+            margin-top: 10px;
+        }
+        ul.skills-list li { 
+            margin-bottom: 15px; 
+            font-size: 0.95rem;
+        }
+        ul.skills-list li strong {
+            color: #000;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* Contact Details */
+        .contact-details p { margin-bottom: 8px; }
+        .contact-details a { color: #0044cc; text-decoration: none; }
+        .contact-details a:hover { text-decoration: underline; }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            body { padding: 30px 20px; }
+            .wrapper { flex-direction: column; gap: 40px; }
+            .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .sidebar h1 { font-size: 1.8rem; }
+            .sidebar nav ul { display: flex; flex-wrap: wrap; gap: 15px; }
+            .sidebar nav ul li { margin-bottom: 0; }
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+<body>
 
-    <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">M. Jafor</a>
-            <nav class="flex gap-6">
-                <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">About</a>
-                <a href="#research" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Research</a>
-                <a href="#skills" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Skills & Experience</a>
-                <a href="#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Contact</a>
-            </nav>
-        </div>
-    </header>
+<div class="wrapper">
+    <aside class="sidebar">
+        <h1>M. Jafor</h1>
+        <div class="title">Graduate Student & Researcher</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills & Training</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    <main class="content">
+        
+        <section id="about">
+            <p>I am an aspiring researcher and dedicated student based in Dhaka, Bangladesh. My primary interests revolve around data-driven problem solving, strategic infrastructure planning, and addressing structural global and contemporary challenges.</p>
+            <p>I actively pursue professional development, international leadership networks, and rigorous management training methodologies to foster global standard competencies.</p>
+        </section>
 
-        <section id="about" class="flex flex-col md:flex-row gap-10 items-center md:items-start pt-6">
-            <div class="w-40 h-40 rounded-full bg-blue-100 border-4 border-white shadow-md flex items-center justify-center flex-shrink-0 text-blue-600 text-4xl font-bold">
-                MJ
+        <section id="research">
+            <p>My core empirical focus centers on public services coordination, market dynamics, and operational optimization. Current research project includes:</p>
+            
+            <div style="margin-top: 20px;">
+                <span class="thesis-title">Service Marketing Mix and Its Impact on Ridership Intention in Public Transport Systems: A Mediating Analysis of Customer Satisfaction</span>
+                <div class="thesis-meta">Ongoing Thesis Project (Dhaka-based Public Transit Systems)</div>
+                <p style="font-size: 0.95rem; color: #444;">This project utilizes structural modeling approaches to analyze how multidimensional service quality integrations directly influence transit intentions, using passenger satisfaction metrics as a key mediator.</p>
             </div>
             
-            <div class="space-y-4 text-center md:text-left">
-                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">M. Jafor</h1>
-                <p class="text-lg text-slate-600 font-medium">Researcher & Graduate Student</p>
-                <p class="text-sm text-slate-500"><i class="fa-solid fa-location-dot mr-1"></i> Dhaka, Bangladesh</p>
-                
-                <div class="prose prose-slate pt-2 text-slate-600 max-w-none">
-                    <p>
-                        I am an aspiring researcher and dedicated graduate student deeply passionate about addressing complex societal and structural challenges. My academic journey focuses on data-driven decision making, empirical research, and service optimization.
-                    </p>
-                    <p class="mt-2">
-                        I actively seek opportunities to collaborate on research projects, explore emerging technological paradigms, and develop sustainable models for public services.
-                    </p>
-                </div>
-
-                <div class="flex justify-center md:justify-start gap-4 pt-2">
-                    <a href="https://github.com/mjafor" target="_blank" class="text-slate-600 hover:text-slate-900 transition text-xl">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="mailto:your.email@example.com" class="text-slate-600 hover:text-red-600 transition text-xl">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
+            <p>Additionally, I maintain a strong secondary interest in examining strategic marketing dynamics within emerging technological frameworks, including structural resource behavior in virtual spaces like the Metaverse.</p>
         </section>
 
-        <section id="research" class="space-y-6 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-blue-600 pb-2">Research & Ongoing Projects</h2>
-            <p class="text-slate-600">My primary research focuses on public transportation systems, customer satisfaction dynamics, and service quality integration.</p>
-
-            <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 mb-3">
-                    <span class="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse"></span>
-                    Active Thesis Project
-                </span>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">
-                    Service Marketing Mix and Its Impact on Ridership Intention in Public Transport Systems: A Mediating Analysis of Customer Satisfaction
-                </h3>
-                <p class="text-sm text-slate-500 mb-4"><em>Context: Urban Public Transit Systems in Dhaka</em></p>
-                <p class="text-slate-600 text-sm">
-                    This empirical research investigates how traditional service marketing dimensions (Product, Price, Place, Promotion, People, Process, Physical Evidence) directly and indirectly influence passengers' long-term ridership intentions, exploring customer satisfaction as a critical mediating path.
-                </p>
-            </div>
+        <section id="skills">
+            <ul class="skills-list">
+                <li>
+                    <strong>Data Analysis & Optimization</strong>
+                    Proficient in Microsoft Excel modeling, utilizing advanced analytical operations, pivot matrices, and logical functions for information management.
+                </li>
+                <li>
+                    <strong>Professional Communication</strong>
+                    Strong core vocabulary skills in academic English, report development, and formal organizational correspondence.
+                </li>
+                <li>
+                    <strong>Strategic Leadership</strong>
+                    Engaged in executive workflows, professional corporate training, and global leadership seminar frameworks.
+                </li>
+            </ul>
         </section>
 
-        <section id="skills" class="space-y-6 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-blue-600 pb-2">Skills & Professional Training</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white border border-slate-100 rounded-lg p-5 shadow-sm space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                        <i class="fa-solid fa-chart-line text-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900">Data Analytics</h3>
-                    <p class="text-xs text-slate-500">Advanced MS Excel (Pivot Tables, logical formulas, dashboards), basic data visualization, and data modeling approaches.</p>
-                </div>
-
-                <div class="bg-white border border-slate-100 rounded-lg p-5 shadow-sm space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                        <i class="fa-solid fa-globe text-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900">Communication</h3>
-                    <p class="text-xs text-slate-500">Highly proficient in academic English writing, research reporting, and structured professional correspondence.</p>
-                </div>
-
-                <div class="bg-white border border-slate-100 rounded-lg p-5 shadow-sm space-y-3">
-                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
-                        <i class="fa-solid fa-people-group text-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-slate-900">Leadership</h3>
-                    <p class="text-xs text-slate-500">Active participant in global leadership workshops, professional development programs, and collaborative teams.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="space-y-6 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-slate-900 border-b-2 border-blue-600 pb-2">Get in Touch</h2>
-            <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
-                            <i class="fa-solid fa-envelope text-sm"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-400">Email Address</p>
-                            <a href="mailto:your.email@example.com" class="text-sm font-semibold text-slate-800 hover:text-blue-600">your.email@example.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">
-                            <i class="fa-solid fa-location-dot text-sm"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-400">Location</p>
-                            <p class="text-sm font-semibold text-slate-800">Dhaka, Bangladesh</p>
-                        </div>
-                    </div>
-                </div>
+        <section id="contact">
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mjafor" target="_blank">github.com/mjafor</a></p>
+                <p><strong>Location:</strong> Dhaka, Bangladesh</p>
             </div>
         </section>
 
     </main>
-
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-sm text-slate-400">
-        <p>&copy; 2026 M. Jafor. Hosted with GitHub Pages.</p>
-    </footer>
+</div>
 
 </body>
 </html>
+
+
+
+
+
